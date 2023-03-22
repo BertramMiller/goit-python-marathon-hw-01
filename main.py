@@ -3,11 +3,11 @@ from pygame.constants import QUIT
 
 pygame.init()
 
-screen = width, height = 1366, 700
+screen = width, height = 800, 600
 
 BLACK = 0, 0, 0
 WHITE = 255, 255, 255
-pastel_colors = ((255, 183, 183), (183, 255, 183), (183, 183, 255), (255, 255, 183),
+PASTEL = ((255, 183, 183), (183, 255, 183), (183, 183, 255), (255, 255, 183),
                  (255, 183, 255), (183, 255, 255), (255, 214, 183), (214, 255, 183),
                  (214, 183, 255), (255, 183, 214), (183, 255, 214), (183, 214, 255),
                  (255, 214, 214), (214, 255, 214), (214, 214, 255), (255, 255, 214),
@@ -36,12 +36,12 @@ while is_working:
 
     if ball_rect.bottom >= height or ball_rect.top <= 0:
         ball_speed[1] = -ball_speed[1]
-        color_index = (color_index + 1) % len(pastel_colors)
-        ball.fill(pastel_colors[color_index])
+        color_index = (color_index + 1) % len(PASTEL)
+        ball.fill(PASTEL[color_index])
     if ball_rect.right >= width or ball_rect.left <= 0:
         ball_speed[0] = -ball_speed[0]
-        color_index = (color_index + 1) % len(pastel_colors)
-        ball.fill(pastel_colors[color_index])
+        color_index = (color_index + 1) % len(PASTEL)
+        ball.fill(PASTEL[color_index])
 
     main_surface.fill(BLACK)
     main_surface.blit(ball, ball_rect)
