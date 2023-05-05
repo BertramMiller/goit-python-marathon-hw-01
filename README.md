@@ -1,4 +1,4 @@
-# Pygame Bouncing Ball
+# Bouncing Ball
 ## goit-python-marathon-hw-01
 
 This is GoIt Python Marathon homework 01. A simple Pygame program that demonstrates a bouncing ball animation.
